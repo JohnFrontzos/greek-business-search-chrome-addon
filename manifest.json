@@ -3,7 +3,10 @@
   "name": "Greek Business Search",
   "version": "0.0.5",
   "description": "Greek Business Search: Convenient access to Greece's registered businesses. Search by VAT, title, or org name",
-  "permissions": ["activeTab"],
+  "permissions": [
+      "activeTab",
+      "https://publicity.businessportal.gr/api/*"
+  ],
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -16,15 +19,5 @@
     "16": "images/icon16.png",
     "48": "images/icon48.png",
     "128": "images/icon128.png"
-  },
-  "background": {
-    "scripts": ["background.js"],
-    "persistent": false
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
-    }
-  ]
+  }
 }

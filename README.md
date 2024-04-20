@@ -1,12 +1,12 @@
 # Greek Business Search Chrome Extension
 
-The Greek Business Search Chrome Extension is an unofficial tool that provides users with convenient access to search for registered businesses in Greece directly from their browser. Leveraging the Greece Public Records database, this extension allows users to search for businesses using various criteria such as VAT number, title, or organization name.
+The Greek Business Search Chrome Extension is an unofficial tool that provides users with convenient access to search for registered businesses in Greece directly from their browser. Leveraging the Greece Public Records database, this extension allows users to search for businesses using various criteria such as TAX ID, title, or organization name.
 
 ## Features
 
 - **Easy Search:** Quickly search for Greek registered businesses by VAT number, title, or organization name directly within the extension.
 - **Comprehensive Database:** Access the Greece Public Records database to ensure comprehensive search results for businesses registered in Greece.
-- **Quick Results:** Instantly retrieve relevant information about businesses, including their registered title, VAT number, organization name, and current status.
+- **Quick Results:** Instantly retrieve relevant information about businesses, including their registered title, TAX ID, organization name, and current status.
 - **User-Friendly Interface:** Enjoy a simple and intuitive user interface designed to streamline the search process and provide users with a seamless experience.
 - **Convenient Access:** Access the extension directly from your Chrome browser toolbar, allowing for quick and hassle-free access whenever needed.
 
