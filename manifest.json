@@ -2,9 +2,8 @@
   "manifest_version": 2,
   "name": "Greek Business Search",
   "version": "0.1.0",
-  "description": "Greek Business Search: Convenient access to Greece's registered businesses. Search by VAT, title, or org name",
+  "description": "Greek Business Search: Convenient access to Greece's registered businesses. Search by TAX ID, title, or org name",
   "permissions": [
-      "activeTab",
       "https://publicity.businessportal.gr/api/*"
   ],
   "browser_action": {
