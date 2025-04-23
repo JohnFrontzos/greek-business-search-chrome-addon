@@ -12,38 +12,17 @@ const activeStatus = "Ενεργή"; // Define active status globally
 function searchBusinessPortal() {
   var searchTerm = document.getElementById('searchInput').value.trim();
   if (searchTerm) {
-    fetch(`https://publicity.businessportal.gr/api/autocomplete/${searchTerm}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ token: null, language: "el" }) // Adding language in el, because the en version is missing attribute values!
-    })
-    .then(response => response.json())
-    .then(data => {
-
-      // Fill title with co_name if title is empty
-      data.payload.autocomplete.forEach(item => {
-        if (!item.title) {
-          item.title = item.co_name;
-        }
-      });
-
-      // Sort results with active status first
-      data.payload.autocomplete.sort((a, b) => {
-        if (a.companyStatus === activeStatus && b.companyStatus !== activeStatus) {
-          return -1;
-        } else if (a.companyStatus !== activeStatus && b.companyStatus === activeStatus) {
-          return 1;
+    chrome.runtime.sendMessage(
+      { action: "searchBusiness", searchTerm: searchTerm },
+      (response) => {
+        if (response.error) {
+          console.error('Error:', response.error);
+          displayResults([]);
         } else {
-          return 0;
+          displayResults(response.results);
         }
-      });
-
-      // Display results
-      displayResults(data.payload.autocomplete);
-    })
-    .catch(error => console.error('Error:', error));
+      }
+    );
   }
 }
 
@@ -104,6 +83,3 @@ function displayResults(results) {
     resultsContainer.appendChild(ul);
   }
 }
-
-
-
