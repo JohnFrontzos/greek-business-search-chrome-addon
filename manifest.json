@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Greek Business Search",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Greek Business Search: Convenient access to Greece's registered businesses. Search by TAX ID, title, or org name",
   "permissions": [
       "scripting"
