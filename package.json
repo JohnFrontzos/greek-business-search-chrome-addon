@@ -1,0 +1,23 @@
+{
+  "name": "business-search-chrome-addon",
+  "version": "1.0.0",
+  "description": "A Chrome extension for business search.",
+  "main": "background.js",
+  "scripts": {
+    "lint": "eslint . --ext .js",
+    "format": "prettier --write \"**/*.{js,json,html,css,md}\""
+  },
+  "keywords": [
+    "chrome-extension",
+    "search"
+  ],
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.0",
+    "prettier": "^2.5.0",
+    "eslint-config-prettier": "^8.3.0"
+  }
+}

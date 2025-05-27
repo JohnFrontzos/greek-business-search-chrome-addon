@@ -1,16 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Greek Business Search",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Greek Business Search: Convenient access to Greece's registered businesses. Search by TAX ID, title, or org name",
-  "permissions": [
-      "scripting"
-  ],
-  "host_permissions": [
-    "https://publicity.businessportal.gr/api/*"
-  ],
+  "permissions": [],
+  "host_permissions": ["https://publicity.businessportal.gr/api/*"],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "type": "module"
   },
   "action": {
     "default_popup": "popup/popup.html",
